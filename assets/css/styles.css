@@ -1,62 +1,199 @@
-/* assets/css/styles.css */
+/* CSS Variables for Easy Theme Management */
+:root {
+    --primary-color: #2E8B57; /* Sea Green */
+    --secondary-color: #FF6347; /* Tomato */
+    --background-color: #f9f9f9; /* Light Gray */
+    --text-color: #333333; /* Dark Gray */
+    --header-footer-bg: #2E8B57; /* Sea Green */
+    --button-bg: #FF6347; /* Tomato */
+    --button-hover-bg: #e5533d; /* Darker Tomato */
+    --card-bg: #ffffff; /* White */
+    --card-border: #dddddd; /* Light Gray Border */
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
 
-body {
-    font-family: 'Mountains of Christmas', cursive;
-    background-color: #003366; /* Dark Blue for a night sky */
-    color: #fff;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-header, footer {
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--header-footer-bg);
+    color: #ffffff;
+    padding: 20px 0;
+    width: 100%;
 }
 
 header h1 {
-    font-size: 3em;
-    color: #ff0000; /* Bright Red */
-    text-shadow: 0 0 10px #ff0000;
+    font-size: 2em;
+    margin-bottom: 10px;
+    font-weight: 600;
 }
 
+header p {
+    font-size: 1em;
+}
+
+/* Main Content Styles */
+main {
+    flex: 1;
+    padding: 20px 10px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Install Section */
 .install-section {
+    background-color: var(--card-bg);
     padding: 20px;
-    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.install-section h2 {
+    font-size: 1.5em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.install-section ol {
+    text-align: left;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.install-section li {
+    margin-bottom: 10px;
+    font-size: 1em;
 }
 
 .bookmarklet-button {
     display: inline-block;
-    padding: 15px 25px;
-    background-color: #ff0000; /* Bright Red */
-    color: #fff;
+    padding: 10px 20px;
+    background-color: var(--button-bg);
+    color: #ffffff;
     text-decoration: none;
+    font-size: 1em;
     border-radius: 5px;
-    margin: 20px 0;
-    cursor: grab;
-    font-size: 1.5em;
-    box-shadow: 0 0 10px #ff0000;
-}
-
-.bookmarklet-button:active {
-    cursor: grabbing;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    cursor: pointer;
 }
 
 .bookmarklet-button:hover {
-    background-color: #cc0000;
+    background-color: var(--button-hover-bg);
 }
 
-footer p {
-    font-size: 0.9em;
+/* Features Section */
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.feature {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px var(--shadow-color);
+}
+
+.feature h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.feature p {
+    font-size: 1em;
+    color: var(--text-color);
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--header-footer-bg);
+    color: #ffffff;
+    padding: 15px 0;
+    width: 100%;
+    font-size: 0.8em;
 }
 
 footer a {
-    color: #ff0000;
-    text-decoration: none;
+    color: #ffffff;
+    text-decoration: underline;
+    transition: color 0.3s ease;
 }
 
 footer a:hover {
-    text-decoration: underline;
+    color: #dddddd;
 }
 
-/* Importing Christmas font */
-@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&display=swap');
+/* Responsive Design */
+@media (min-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header p {
+        font-size: 1.1em;
+    }
+
+    main {
+        padding: 40px 20px;
+        max-width: 1200px;
+    }
+
+    .install-section {
+        padding: 30px;
+        margin-bottom: 40px;
+    }
+
+    .install-section h2 {
+        font-size: 2em;
+    }
+
+    .features {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .feature {
+        width: 280px;
+    }
+
+    .bookmarklet-button {
+        padding: 15px 30px;
+        font-size: 1.2em;
+    }
+}
