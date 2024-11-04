@@ -1,6 +1,13 @@
 // assets/js/bookmarklet.js
 
 (function() {
+    // Check if the bookmarklet has already been initialized
+    if (window.christmasBookmarkletInitialized) {
+        console.log('Christmas Bookmarklet is already active.');
+        return;
+    }
+    window.christmasBookmarkletInitialized = true;
+
     // Initialize chaos level
     let chaosLevel = 1;
     const maxInitialChaos = 10;
@@ -26,7 +33,9 @@
 
     // Inject necessary CSS styles
     function injectStyles() {
+        if (document.getElementById('christmas-bookmarklet-styles')) return;
         const style = document.createElement('style');
+        style.id = 'christmas-bookmarklet-styles';
         style.innerHTML = `
             /* Wiggle Animation for Headlines */
             @keyframes wiggle {
@@ -133,6 +142,7 @@
                 position: fixed;
                 top: 50%;
                 left: -50px;
+                transform: translateY(-50%);
                 font-size: 3em;
                 animation: santa-move 10s linear forwards;
                 pointer-events: none;
@@ -246,7 +256,9 @@
 
     // Function to add snowflakes
     function addSnowflakes() {
-        const snowflakeCount = 15 + Math.floor(chaosLevel * 3);
+        const existingSnowflakes = document.querySelectorAll('.snowflake').length;
+        const maxSnowflakes = 100; // Maximum number of snowflakes allowed
+        const snowflakeCount = Math.min(15 + Math.floor(chaosLevel * 3), maxSnowflakes - existingSnowflakes);
         for (let i = 0; i < snowflakeCount; i++) {
             const snowflake = document.createElement('div');
             snowflake.textContent = '❄️';
@@ -257,7 +269,7 @@
             snowflake.style.fontSize = `${Math.random() * 2 + 0.5}em`;
             document.body.appendChild(snowflake);
 
-            // Remove snowflake after animation
+            // Remove snowflake after animation to free up resources
             snowflake.addEventListener('animationend', () => {
                 snowflake.remove();
             });
@@ -266,7 +278,9 @@
 
     // Function to add ornaments
     function addOrnaments() {
-        const ornamentCount = 10 + Math.floor(chaosLevel * 2);
+        const existingOrnaments = document.querySelectorAll('.ornament').length;
+        const maxOrnaments = 80; // Maximum number of ornaments allowed
+        const ornamentCount = Math.min(10 + Math.floor(chaosLevel * 2), maxOrnaments - existingOrnaments);
         for (let i = 0; i < ornamentCount; i++) {
             const ornament = document.createElement('div');
             ornament.textContent = '🎄';
@@ -277,7 +291,7 @@
             ornament.style.fontSize = `${Math.random() * 2 + 1}em`;
             document.body.appendChild(ornament);
 
-            // Remove ornament after animation
+            // Remove ornament after animation to free up resources
             ornament.addEventListener('animationend', () => {
                 ornament.remove();
             });
@@ -409,6 +423,9 @@
         document.body.appendChild(overlay);
 
         function showSanta() {
+            // Prevent multiple Santa animations
+            if (document.querySelector('.santa-animation')) return;
+
             const santa = document.createElement('div');
             santa.textContent = '🎅';
             santa.classList.add('santa-animation');
