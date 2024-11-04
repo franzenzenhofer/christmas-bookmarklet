@@ -1,0 +1,16 @@
+{
+  "name": "christmas-bookmarklet",
+  "version": "1.0.22",
+  "description": "A festive Christmas-themed bookmarklet that transforms webpages.",
+  "main": "deploy.js",
+  "scripts": {
+    "deploy": "node deploy.js"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "cheerio": "^1.0.0",
+    "mime-types": "^2.1.35",
+    "terser": "^5.16.0"
+  }
+}

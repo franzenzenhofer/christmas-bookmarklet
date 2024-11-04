@@ -1,0 +1,62 @@
+/* assets/css/styles.css */
+
+body {
+    font-family: 'Mountains of Christmas', cursive;
+    background-color: #003366; /* Dark Blue for a night sky */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 3em;
+    color: #ff0000; /* Bright Red */
+    text-shadow: 0 0 10px #ff0000;
+}
+
+.install-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.bookmarklet-button {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: #ff0000; /* Bright Red */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 20px 0;
+    cursor: grab;
+    font-size: 1.5em;
+    box-shadow: 0 0 10px #ff0000;
+}
+
+.bookmarklet-button:active {
+    cursor: grabbing;
+}
+
+.bookmarklet-button:hover {
+    background-color: #cc0000;
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #ff0000;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Importing Christmas font */
+@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&display=swap');

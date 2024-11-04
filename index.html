@@ -1,0 +1,240 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>🎄 Christmas Bookmarklet 🎅</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+       /* assets/css/styles.css */
+
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+/* CSS Variables for Easy Theme Management */
+:root {
+    --primary-color: #2E8B57; /* Sea Green */
+    --secondary-color: #FF6347; /* Tomato */
+    --background-color: #f9f9f9; /* Light Gray */
+    --text-color: #333333; /* Dark Gray */
+    --header-footer-bg: #2E8B57; /* Sea Green */
+    --button-bg: #FF6347; /* Tomato */
+    --button-hover-bg: #e5533d; /* Darker Tomato */
+    --card-bg: #ffffff; /* White */
+    --card-border: #dddddd; /* Light Gray Border */
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--header-footer-bg);
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+header p {
+    font-size: 1.1em;
+}
+
+/* Main Content Styles */
+main {
+    flex: 1;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Install Section */
+.install-section {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    margin-bottom: 40px;
+}
+
+.install-section h2 {
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.install-section ol {
+    text-align: left;
+    margin-bottom: 30px;
+    padding-left: 20px;
+}
+
+.install-section li {
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+
+.bookmarklet-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--button-bg);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    cursor: pointer;
+}
+
+.bookmarklet-button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.feature {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px var(--shadow-color);
+}
+
+.feature h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.feature p {
+    font-size: 1em;
+    color: var(--text-color);
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--header-footer-bg);
+    color: #ffffff;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #dddddd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .bookmarklet-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎄 Christmas Bookmarklet 🎅</h1>
+        <p>Transform any webpage into a festive winter wonderland!</p>
+    </header>
+
+    <main>
+        <section class="install-section">
+            <h2>How to Install</h2>
+            <ol>
+                <li><strong>Add the Bookmarklet:</strong> Drag the "🎄 Install Christmas Bookmarklet" button below to your browser's bookmarks bar.</li>
+                <li><strong>Navigate to Any Webpage:</strong> Open the webpage you want to decorate with Christmas cheer.</li>
+                <li><strong>Click the Bookmarklet:</strong> Click the "🎄 Install Christmas Bookmarklet" bookmarklet in your bookmarks bar to transform the page.</li>
+            </ol>
+            <a href="javascript:(function(){!function(){let n=1;const t=10,e=Date.now(),o=new Set;function a(n){return&quot;bookmarklet-link&quot;===n.id||n.classList.contains(&quot;bookmarklet-button&quot;)||n.closest(&quot;main&quot;)||&quot;SCRIPT&quot;===n.tagName||&quot;STYLE&quot;===n.tagName||n.isContentEditable||&quot;INPUT&quot;===n.tagName||&quot;TEXTAREA&quot;===n.tagName||&quot;SELECT&quot;===n.tagName}function i(n){return n.replace(/o/i,&quot;hoho&quot;)}function r(n){const t=[&quot;Santa&quot;,&quot;Elf&quot;,&quot;Reindeer&quot;,&quot;Sleigh&quot;,&quot;Snowman&quot;,&quot;Candy&quot;,&quot;Christmas&quot;,&quot;Snow&quot;,&quot;Merry&quot;,&quot;Jolly&quot;,&quot;Festive&quot;,&quot;Holiday&quot;,&quot;Yule&quot;,&quot;Tinsel&quot;,&quot;Ornament&quot;,&quot;Star&quot;,&quot;Gift&quot;,&quot;Mistletoe&quot;,&quot;Bauble&quot;,&quot;Icicle&quot;,&quot;Gingerbread&quot;,&quot;Nutcracker&quot;,&quot;Carol&quot;,&quot;Frost&quot;,&quot;Twinkle&quot;,&quot;Bells&quot;,&quot;Wreath&quot;,&quot;Peppermint&quot;,&quot;Snowflake&quot;,&quot;North Pole&quot;];return t[Math.floor(Math.random()*t.length)]}function s(){document.querySelectorAll(&quot;p, h1, h2, h3, h4, h5, h6, span, a, div, li, td, th&quot;).forEach((n=>{a(n)||n.classList.add(&quot;christmas-colors&quot;)}))}function l(){document.querySelectorAll(&quot;h1, h2, h3, h4, h5, h6&quot;).forEach((e=>{a(e)||Math.random()<n/t*.6&amp;&amp;e.classList.add(&quot;wiggle&quot;)}))}function d(){const t=15+Math.floor(3*n);for(let n=0;n<t;n++){const n=document.createElement(&quot;div&quot;);n.textContent=&quot;❄️&quot;,n.classList.add(&quot;snowflake&quot;),n.style.left=100*Math.random()+&quot;%&quot;,n.style.animationDuration=5+10*Math.random()+&quot;s&quot;,n.style.opacity=Math.random(),n.style.fontSize=2*Math.random()+.5+&quot;em&quot;,document.body.appendChild(n),n.addEventListener(&quot;animationend&quot;,(()=>{n.remove()}))}}function c(){d(),function(){const t=10+Math.floor(2*n);for(let n=0;n<t;n++){const n=document.createElement(&quot;div&quot;);n.textContent=&quot;🎄&quot;,n.classList.add(&quot;ornament&quot;),n.style.left=100*Math.random()+&quot;%&quot;,n.style.animationDuration=8+5*Math.random()+&quot;s&quot;,n.style.opacity=Math.random(),n.style.fontSize=2*Math.random()+1+&quot;em&quot;,document.body.appendChild(n),n.addEventListener(&quot;animationend&quot;,(()=>{n.remove()}))}}()}function m(){!function(){const e=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:function(n){return a(n.parentElement)?NodeFilter.FILTER_REJECT:n.nodeValue.trim()?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT}},!1);let s;for(;s=e.nextNode();){const e=s.nodeValue.split(/(\s+)/);let a=!1;for(let s=0;s<e.length;s++){const l=e[s];if(/^[\w]+$/.test(l)){if(o.has(l.toLowerCase()))continue;const d=Math.random(),c=n/t*.5,m=n/t*.3,f=n/t*.2;d<c?(e[s]=i(l),o.add(l.toLowerCase()),a=!0):d<c+m?(e[s]=r(),o.add(l.toLowerCase()),a=!0):d<c+m+f&amp;&amp;(e[s]=i(r()),o.add(l.toLowerCase()),a=!0)}}a&amp;&amp;(s.nodeValue=e.join(&quot;&quot;))}}(),s(),l(),c()}function f(){m(),setTimeout((()=>{l(),s(),c()}),6e4),setInterval((()=>{!function(){const t=(Date.now()-e)/1e3;n=t<=10?1+t/10*9:Math.min(n+.2,30)}(),m()}),1e3)}!function(){const n=document.createElement(&quot;style&quot;);n.innerHTML=&quot;\n            /* Wiggle Animation for Headlines */\n            @keyframes wiggle {\n                0% { transform: rotate(0deg); }\n                25% { transform: rotate(-5deg); }\n                50% { transform: rotate(5deg); }\n                75% { transform: rotate(-5deg); }\n                100% { transform: rotate(0deg); }\n            }\n            .wiggle {\n                animation: wiggle 1s ease-in-out infinite;\n            }\n\n            /* Christmas Colors Animation */\n            @keyframes christmas-colors {\n                0% { color: #FF0000; } /* Red */\n                25% { color: #00FF00; } /* Green */\n                50% { color: #FFD700; } /* Gold */\n                75% { color: #FFFFFF; } /* White */\n                100% { color: #FF0000; } /* Red */\n            }\n            .christmas-colors {\n                animation: christmas-colors 10s linear infinite;\n            }\n\n            /* Snowflake Animation */\n            @keyframes snow-fall {\n                from { transform: translateY(-10px); opacity: 1; }\n                to { transform: translateY(100vh); opacity: 0.5; }\n            }\n            .snowflake {\n                position: fixed;\n                top: -10px;\n                color: #fff;\n                user-select: none;\n                pointer-events: none;\n                animation: snow-fall 10s linear infinite;\n                font-size: 1em;\n                z-index: 9999;\n            }\n\n            /* Ornament Animation */\n            @keyframes ornament-fall {\n                from { transform: translateY(-50px) rotate(0deg); opacity: 1; }\n                to { transform: translateY(100vh) rotate(360deg); opacity: 0; }\n            }\n            .ornament {\n                position: fixed;\n                top: -50px;\n                user-select: none;\n                pointer-events: none;\n                animation: ornament-fall 8s linear infinite;\n                font-size: 1.5em;\n                z-index: 9999;\n            }\n\n            /* Christmas Lights */\n            .christmas-lights {\n                position: fixed;\n                width: 100%;\n                height: 30px;\n                top: 0;\n                left: 0;\n                display: flex;\n                justify-content: space-around;\n                z-index: 10001;\n                pointer-events: none;\n            }\n            .christmas-lights .light {\n                width: 15px;\n                height: 25px;\n                background-color: red;\n                border-radius: 50%;\n                animation: blink 1s infinite;\n            }\n            .christmas-lights .light:nth-child(odd) {\n                background-color: green;\n            }\n            @keyframes blink {\n                0%, 100% { opacity: 1; }\n                50% { opacity: 0.3; }\n            }\n\n            /* Merry Christmas Banner */\n            #merry-christmas-banner {\n                position: fixed;\n                top: 0;\n                width: 100%;\n                background-color: #ff0000;\n                color: #fff;\n                text-align: center;\n                font-size: 2em;\n                padding: 10px 0;\n                z-index: 10002;\n                pointer-events: none;\n            }\n\n            /* Santa Animation */\n            @keyframes santa-move {\n                from { left: -50px; }\n                to { left: 100%; }\n            }\n            .santa-animation {\n                position: fixed;\n                top: 50%;\n                left: -50px;\n                font-size: 3em;\n                animation: santa-move 10s linear forwards;\n                pointer-events: none;\n                z-index: 10003;\n            }\n        &quot;,document.head.appendChild(n)}(),function(){if(document.querySelector(&quot;.christmas-lights&quot;))return;const n=document.createElement(&quot;div&quot;);n.classList.add(&quot;christmas-lights&quot;);for(let t=0;t<20;t++){const t=document.createElement(&quot;div&quot;);t.classList.add(&quot;light&quot;),n.appendChild(t)}document.body.appendChild(n)}(),function(){if(document.getElementById(&quot;merry-christmas-banner&quot;))return;const n=document.createElement(&quot;div&quot;);n.id=&quot;merry-christmas-banner&quot;,n.textContent=&quot;Merry Christmas!&quot;,document.body.appendChild(n)}(),f(),function(){const e=new(window.AudioContext||window.webkitAudioContext);function o(){const n=e.createOscillator(),t=e.createGain();n.type=&quot;sine&quot;,n.frequency.setValueAtTime(880,e.currentTime),n.frequency.exponentialRampToValueAtTime(1760,e.currentTime+1),t.gain.setValueAtTime(.1,e.currentTime),t.gain.exponentialRampToValueAtTime(1e-4,e.currentTime+1),n.connect(t),t.connect(e.destination),n.start(),n.stop(e.currentTime+1)}function a(){const e=n/t,i=1e4/e,r=2e4/e,s=Math.random()*(r-i)+i;setTimeout((()=>{o(),a()}),s)}a()}(),function(){const e=document.createElement(&quot;div&quot;);function o(){const n=document.createElement(&quot;div&quot;);n.textContent=&quot;🎅&quot;,n.classList.add(&quot;santa-animation&quot;),document.body.appendChild(n),n.addEventListener(&quot;animationend&quot;,(()=>{n.remove()}))}function a(){d()}function i(){e.style.opacity=&quot;1&quot;,setTimeout((()=>{e.style.opacity=&quot;0&quot;,Math.random()<.5?o():a()}),200);const r=n/t,s=8e3/r,l=25e3/r,d=Math.random()*(l-s)+s;setTimeout(i,d)}e.id=&quot;festive-overlay&quot;,e.style.backgroundColor=&quot;rgba(0, 51, 102, 0.5)&quot;,e.style.position=&quot;fixed&quot;,e.style.top=&quot;0&quot;,e.style.left=&quot;0&quot;,e.style.width=&quot;100%&quot;,e.style.height=&quot;100%&quot;,e.style.pointerEvents=&quot;none&quot;,e.style.zIndex=&quot;10000&quot;,e.style.opacity=&quot;0&quot;,e.style.transition=&quot;opacity 0.2s&quot;,document.body.appendChild(e),i()}()}();})();" class="bookmarklet-button" id="bookmarklet-link">🎄Christmas Bookmarklet</a>
+            <p style="margin-top: 20px;">Once installed, enjoy a magical Christmas transformation on any webpage!</p>
+            <p id="version-info-install" style="text-align: center; margin-top: 20px;">Version: 1.0.22 | Last Updated: 11/4/2024, 4:50:07 PM</p>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <h3>✨ Festive Animations</h3>
+                <p>Enjoy animated snowflakes, twinkling Christmas lights, and moving ornaments that bring the holiday spirit to life.</p>
+            </div>
+            <div class="feature">
+                <h3>🎅 Santa's Magic</h3>
+                <p>Watch Santa Claus traverse the screen, spreading joy and cheer across your favorite websites.</p>
+            </div>
+            <div class="feature">
+                <h3>🔤 Word Transformation</h3>
+                <p>Every word on the page is transformed into Christmas-themed words, enhancing your browsing experience with holiday magic.</p>
+            </div>
+            <div class="feature">
+                <h3>🔊 Festive Sounds</h3>
+                <p>Listen to cheerful Christmas bell sounds that play intermittently, adding an auditory layer to the festive transformation.</p>
+            </div>
+            <div class="feature">
+                <h3>🌟 Colorful Themes</h3>
+                <p>Text colors cycle through classic Christmas hues, making every section of the webpage feel merry and bright.</p>
+            </div>
+            <div class="feature">
+                <h3>🎁 Easy to Use</h3>
+                <p>Simply install the bookmarklet and click it on any webpage to instantly transform it into a Christmas paradise.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Version: 1.0.22 | Last Updated: 11/4/2024, 4:50:07 PM</p>
+        <p><a href="https://github.com/yourusername/christmas-bookmarklet" style="color: #fff; text-decoration: underline;">GitHub Repository</a></p>
+    </footer>
+
+
+</body></html>
